@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>CHIAPAS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="warning">
+    <ion-slides pager="false" [options]="slideOpts">
+      <ion-slide *ngFor="let g of gallery">
+        <ion-card>
+          <ion-img [src]="g.img"></ion-img>
+          <ion-card-header>
+            <ion-card-subtitle>{{g.subtitle}}</ion-card-subtitle>
+            <ion-card-title>{{g.title}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+              {{g.content}}
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </ion-content>
